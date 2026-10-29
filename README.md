@@ -3,7 +3,7 @@
 Runnable examples for [Ten-Grd](https://pypi.org/project/ten-grd/), a Python SDK
 that keeps tenant data isolated in agent tools, memory, retrieval and caches.
 Every example installs Ten-Grd from PyPI and uses synthetic tenant data.
-Documentation: [ikurira.github.io/ten-grd-examples](https://ikurira.github.io/ten-grd-examples/).
+Documentation: [heimdallsystems.github.io/ten-grd-examples](https://heimdallsystems.github.io/ten-grd-examples/).
 
 | Example | Shows | Needs |
 | --- | --- | --- |
