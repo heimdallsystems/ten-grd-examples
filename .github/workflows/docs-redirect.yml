@@ -1,0 +1,40 @@
+# The Ten-Grd docs site moved to heimdallsystems/ten-grd. GitHub Pages cannot send
+# HTTP redirects, so this keeps old links to this repository's address working.
+name: docs-redirect
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build one redirect page per old docs page
+        run: |
+          for page in "" examples probe integrations threat-model technical-specification security-regression-guide; do
+            mkdir -p "site/$page"
+            sed "s|@PAGE@|${page:+$page/}|g" redirect/page.html > "site/$page/index.html"
+          done
+          sed "s|@PAGE@||g" redirect/page.html > site/404.html
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    if: github.event_name == 'push'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -3,7 +3,7 @@
 Runnable examples for [Ten-Grd](https://pypi.org/project/ten-grd/), a Python SDK
 that keeps tenant data isolated in agent tools, memory, retrieval and caches.
 Every example installs Ten-Grd from PyPI and uses synthetic tenant data.
-Documentation: [heimdallsystems.github.io/ten-grd-examples](https://heimdallsystems.github.io/ten-grd-examples/).
+Documentation: [heimdallsystems.github.io/ten-grd](https://heimdallsystems.github.io/ten-grd/).
 
 | Example | Shows | Needs |
 | --- | --- | --- |
@@ -69,7 +69,7 @@ python demo/rag_agent_demo.py claude-sonnet-5-5
 
 `ten-grd probe` plants a unique canary in each synthetic test tenant and tries to
 reach it from the others, through an agent you already built. See the
-[leak probe guide](https://heimdallsystems.github.io/ten-grd-examples/probe/), including
+[leak probe guide](https://heimdallsystems.github.io/ten-grd/probe/), including
 what a clean result does and does not mean.
 
 ## Tests
