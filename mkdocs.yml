@@ -37,6 +37,6 @@ nav:
   - Technical specification: technical-specification.md
   - Security regression guide: security-regression-guide.md
 
-# integrations.md, threat-model.md, technical-specification.md and
-# security-regression-guide.md are copied from the Ten-Grd source repository,
-# whose CI fails if they differ. Change them there first.
+# integrations.md, threat-model.md and security-regression-guide.md are copied
+# from the Ten-Grd source repository, whose CI fails if they differ. Change them
+# there first. technical-specification.md lives only here.
